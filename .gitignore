@@ -1,0 +1,17 @@
+# IDE
+.idea
+__py*
+
+# MacOS
+.DS*
+
+# Jupyter notebook
+.ipynb*
+
+# Test
+playground
+
+# Large Size
+*att_maps*
+*.jpg
+*.pkl

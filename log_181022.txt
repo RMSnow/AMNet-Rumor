@@ -1,0 +1,609 @@
+Packages & system versions:
+----------------------------------------------------------------------
+numpy :  1.13.0
+OpenCV :  3.2.0
+PIL :  1.1.7
+cudnn :  6021
+cuda :  	CUDA Version 8.0.61
+torch :  0.2.0_2
+python :  3
+torchvision :  0.1.9
+platform :  Linux-3.10.0-514.el7.x86_64-x86_64-with-centos-7.3.1611-Core
+display :  	NVRM version: NVIDIA UNIX x86_64 Kernel Module  375.26  Thu Dec  8 18:36:43 PST 2016
+	GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC)
+
+Configuration
+----------------------------------------------------------------------
+[0] cuda_device: 0
+[1] dataset_name: lamem
+[2] dataset_root: /media/Data/qipeng/modified_complete_images/AMNet-Rumor/lamem/
+[3] epoch_max: 55
+[4] epoch_start: 0
+[5] eval_images: 
+[6] experiment_name: lamem_ResNet50FC_lstm3_train_0
+[7] front_end_cnn: ResNet50FC
+[8] gamma: 1e-05
+[9] images_dir: images
+[10] img_mean: [0.485, 0.456, 0.406]
+[11] img_std: [0.229, 0.224, 0.225]
+[12] l2_req: 1e-06
+[13] last_step_prediction: False
+[14] lr: [0.0001]
+[15] lr_epochs: [0]
+[16] mem_loc_w: [1.0, 0.10000000149011612, 0.009999999776482582]
+[17] model_weights: 
+[18] omega: 0
+[19] seq_steps: 3
+[20] splits_dir: splits
+[21] target_mean: 0.754
+[22] target_scale: 2.0
+[23] test_batch_size: 256
+[24] test_split: 
+[25] torch_version_major: 0
+[26] torch_version_minor: 2
+[27] torchvision_version_major: 0
+[28] torchvision_version_minor: 1
+[29] train_batch_size: 256
+[30] train_split: train_0
+[31] use_attention: True
+[32] use_cuda: True
+[33] val_split: val_0
+
+Current CUDA device:  0
+/media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0
+train_log_0.csv
+Loading checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_0.pkl
+Cannot open file:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_0.pkl
+Loaded dataset:
+	 /media/Data/qipeng/modified_complete_images/AMNet-Rumor/lamem/splits/train_0.txt
+	train:  True
+	samples:  10133
+	batch size:  256
+	num_workers:  8
+Loaded dataset:
+	 /media/Data/qipeng/modified_complete_images/AMNet-Rumor/lamem/splits/val_0.txt
+	train:  False
+	samples:  2533
+	batch size:  256
+	num_workers:  8
+--------------------------------------------------------------------------------------
+Epoch:  1   Setting new learning rate:  0.0001
+000:10.940 - 1 [    0/ 10133 (0%)]  	Loss: 1.148266 (1.147596,  0.000670)  [8.444 sec]
+000:36.577 - 1 [ 2560/ 10133 (26%)]  	Loss: 1.024959 (1.024289,  0.000670)  [25.637 sec]
+001:02.241 - 1 [ 5120/ 10133 (51%)]  	Loss: 0.992391 (0.991721,  0.000670)  [25.665 sec]
+001:28.151 - 1 [ 7680/ 10133 (77%)]  	Loss: 0.978891 (0.978221,  0.000670)  [25.909 sec]
+001:48.551 - 1 RC: -0.021332  MSE: 0.250150  [106.055 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_1.pkl
+
+Validation: avg_loss: 1.0690 (1.0684,  0.0007)    RC: 0.309000  MSE: 0.267092  image_inference: 3173.657 us
+
+--------------------------------------------------------------------------------------
+002:17.851 - 2 [    0/ 10133 (0%)]  	Loss: 0.965520 (0.964850,  0.000670)  [7.590 sec]
+002:43.538 - 2 [ 2560/ 10133 (26%)]  	Loss: 0.942001 (0.941331,  0.000670)  [25.687 sec]
+003:09.396 - 2 [ 5120/ 10133 (51%)]  	Loss: 0.897440 (0.896770,  0.000670)  [25.858 sec]
+003:35.429 - 2 [ 7680/ 10133 (77%)]  	Loss: 0.869705 (0.869034,  0.000670)  [26.033 sec]
+003:56.061 - 2 RC: 0.278828  MSE: 0.223017  [105.800 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_2.pkl
+
+Validation: avg_loss: 0.8350 (0.8343,  0.0007)    RC: 0.386529  MSE: 0.208580  image_inference: 3177.500 us
+
+--------------------------------------------------------------------------------------
+004:25.685 - 3 [    0/ 10133 (0%)]  	Loss: 0.851421 (0.850750,  0.000670)  [8.344 sec]
+004:51.551 - 3 [ 2560/ 10133 (26%)]  	Loss: 0.854345 (0.853675,  0.000670)  [25.865 sec]
+005:17.511 - 3 [ 5120/ 10133 (51%)]  	Loss: 0.830622 (0.829952,  0.000670)  [25.960 sec]
+005:43.439 - 3 [ 7680/ 10133 (77%)]  	Loss: 0.785468 (0.784798,  0.000670)  [25.929 sec]
+006:03.983 - 3 RC: 0.379386  MSE: 0.201736  [106.642 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_3.pkl
+
+Validation: avg_loss: 0.7449 (0.7442,  0.0007)    RC: 0.438851  MSE: 0.186047  image_inference: 3170.015 us
+
+--------------------------------------------------------------------------------------
+006:32.907 - 4 [    0/ 10133 (0%)]  	Loss: 0.775485 (0.774815,  0.000670)  [7.465 sec]
+006:58.631 - 4 [ 2560/ 10133 (26%)]  	Loss: 0.754880 (0.754210,  0.000670)  [25.724 sec]
+007:24.432 - 4 [ 5120/ 10133 (51%)]  	Loss: 0.796492 (0.795822,  0.000670)  [25.800 sec]
+007:50.301 - 4 [ 7680/ 10133 (77%)]  	Loss: 0.738925 (0.738255,  0.000670)  [25.870 sec]
+008:10.985 - 4 RC: 0.422665  MSE: 0.190986  [105.542 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_4.pkl
+
+Validation: avg_loss: 0.7611 (0.7605,  0.0007)    RC: 0.454097  MSE: 0.190116  image_inference: 3178.083 us
+
+--------------------------------------------------------------------------------------
+008:39.916 - 5 [    0/ 10133 (0%)]  	Loss: 0.765791 (0.765121,  0.000670)  [7.479 sec]
+009:05.820 - 5 [ 2560/ 10133 (26%)]  	Loss: 0.752068 (0.751398,  0.000670)  [25.904 sec]
+009:31.873 - 5 [ 5120/ 10133 (51%)]  	Loss: 0.638362 (0.637692,  0.000670)  [26.053 sec]
+009:57.901 - 5 [ 7680/ 10133 (77%)]  	Loss: 0.720897 (0.720226,  0.000670)  [26.028 sec]
+010:18.565 - 5 RC: 0.441118  MSE: 0.185401  [106.128 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_5.pkl
+
+Validation: avg_loss: 0.7182 (0.7176,  0.0007)    RC: 0.470878  MSE: 0.179392  image_inference: 3182.854 us
+
+--------------------------------------------------------------------------------------
+010:48.142 - 6 [    0/ 10133 (0%)]  	Loss: 0.738525 (0.737855,  0.000670)  [8.073 sec]
+011:14.084 - 6 [ 2560/ 10133 (26%)]  	Loss: 0.704388 (0.703718,  0.000670)  [25.942 sec]
+011:40.093 - 6 [ 5120/ 10133 (51%)]  	Loss: 0.768359 (0.767689,  0.000670)  [26.009 sec]
+012:06.080 - 6 [ 7680/ 10133 (77%)]  	Loss: 0.616910 (0.616240,  0.000670)  [25.987 sec]
+012:26.631 - 6 RC: 0.454750  MSE: 0.183382  [106.562 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_6.pkl
+
+Validation: avg_loss: 0.7076 (0.7069,  0.0007)    RC: 0.478476  MSE: 0.176731  image_inference: 3187.923 us
+
+--------------------------------------------------------------------------------------
+012:55.551 - 7 [    0/ 10133 (0%)]  	Loss: 0.716149 (0.715478,  0.000670)  [7.424 sec]
+013:21.186 - 7 [ 2560/ 10133 (26%)]  	Loss: 0.767074 (0.766404,  0.000670)  [25.636 sec]
+013:46.942 - 7 [ 5120/ 10133 (51%)]  	Loss: 0.719520 (0.718850,  0.000670)  [25.756 sec]
+014:12.910 - 7 [ 7680/ 10133 (77%)]  	Loss: 0.716526 (0.715856,  0.000670)  [25.968 sec]
+014:33.363 - 7 RC: 0.454151  MSE: 0.178947  [105.236 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_7.pkl
+
+Validation: avg_loss: 0.6820 (0.6813,  0.0007)    RC: 0.489452  MSE: 0.170329  image_inference: 3171.830 us
+
+--------------------------------------------------------------------------------------
+015:01.971 - 8 [    0/ 10133 (0%)]  	Loss: 0.670443 (0.669773,  0.000670)  [7.324 sec]
+015:27.785 - 8 [ 2560/ 10133 (26%)]  	Loss: 0.755897 (0.755227,  0.000670)  [25.815 sec]
+015:53.464 - 8 [ 5120/ 10133 (51%)]  	Loss: 0.633228 (0.632558,  0.000670)  [25.679 sec]
+016:19.390 - 8 [ 7680/ 10133 (77%)]  	Loss: 0.717219 (0.716549,  0.000670)  [25.926 sec]
+016:40.046 - 8 RC: 0.478811  MSE: 0.173674  [105.399 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_8.pkl
+
+Validation: avg_loss: 0.6743 (0.6736,  0.0007)    RC: 0.491716  MSE: 0.168397  image_inference: 3187.381 us
+
+--------------------------------------------------------------------------------------
+017:09.011 - 9 [    0/ 10133 (0%)]  	Loss: 0.760491 (0.759820,  0.000670)  [7.860 sec]
+017:34.878 - 9 [ 2560/ 10133 (26%)]  	Loss: 0.748924 (0.748254,  0.000670)  [25.867 sec]
+018:00.885 - 9 [ 5120/ 10133 (51%)]  	Loss: 0.740448 (0.739777,  0.000670)  [26.007 sec]
+018:26.825 - 9 [ 7680/ 10133 (77%)]  	Loss: 0.706491 (0.705820,  0.000670)  [25.940 sec]
+018:47.440 - 9 RC: 0.473521  MSE: 0.176509  [106.289 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_9.pkl
+
+Validation: avg_loss: 0.6728 (0.6721,  0.0007)    RC: 0.501141  MSE: 0.168027  image_inference: 3183.857 us
+
+--------------------------------------------------------------------------------------
+019:16.658 - 10 [    0/ 10133 (0%)]  	Loss: 0.655780 (0.655110,  0.000670)  [7.691 sec]
+019:42.515 - 10 [ 2560/ 10133 (26%)]  	Loss: 0.741265 (0.740594,  0.000670)  [25.858 sec]
+020:08.426 - 10 [ 5120/ 10133 (51%)]  	Loss: 0.709025 (0.708354,  0.000670)  [25.910 sec]
+020:34.132 - 10 [ 7680/ 10133 (77%)]  	Loss: 0.733926 (0.733256,  0.000670)  [25.706 sec]
+020:54.544 - 10 RC: 0.489982  MSE: 0.170136  [105.577 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_10.pkl
+
+Validation: avg_loss: 0.6557 (0.6550,  0.0007)    RC: 0.506502  MSE: 0.163751  image_inference: 3174.967 us
+
+--------------------------------------------------------------------------------------
+021:23.528 - 11 [    0/ 10133 (0%)]  	Loss: 0.647875 (0.647204,  0.000670)  [7.526 sec]
+021:49.298 - 11 [ 2560/ 10133 (26%)]  	Loss: 0.657371 (0.656700,  0.000670)  [25.771 sec]
+022:14.993 - 11 [ 5120/ 10133 (51%)]  	Loss: 0.605902 (0.605232,  0.000670)  [25.694 sec]
+022:40.692 - 11 [ 7680/ 10133 (77%)]  	Loss: 0.680774 (0.680104,  0.000670)  [25.699 sec]
+023:01.083 - 11 RC: 0.503559  MSE: 0.170654  [105.081 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_11.pkl
+
+Validation: avg_loss: 0.6960 (0.6953,  0.0007)    RC: 0.508911  MSE: 0.173836  image_inference: 3168.596 us
+
+--------------------------------------------------------------------------------------
+023:29.851 - 12 [    0/ 10133 (0%)]  	Loss: 0.621651 (0.620980,  0.000670)  [7.467 sec]
+023:55.550 - 12 [ 2560/ 10133 (26%)]  	Loss: 0.598313 (0.597642,  0.000670)  [25.699 sec]
+024:21.295 - 12 [ 5120/ 10133 (51%)]  	Loss: 0.668635 (0.667965,  0.000670)  [25.745 sec]
+024:47.032 - 12 [ 7680/ 10133 (77%)]  	Loss: 0.753248 (0.752578,  0.000670)  [25.736 sec]
+025:07.442 - 12 RC: 0.527528  MSE: 0.164951  [105.058 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_12.pkl
+
+Validation: avg_loss: 0.7382 (0.7375,  0.0007)    RC: 0.510640  MSE: 0.184374  image_inference: 3176.274 us
+
+--------------------------------------------------------------------------------------
+025:36.410 - 13 [    0/ 10133 (0%)]  	Loss: 0.661978 (0.661307,  0.000670)  [7.552 sec]
+026:02.087 - 13 [ 2560/ 10133 (26%)]  	Loss: 0.731485 (0.730815,  0.000670)  [25.677 sec]
+026:27.864 - 13 [ 5120/ 10133 (51%)]  	Loss: 0.709418 (0.708748,  0.000670)  [25.777 sec]
+026:53.740 - 13 [ 7680/ 10133 (77%)]  	Loss: 0.641019 (0.640348,  0.000670)  [25.876 sec]
+027:14.128 - 13 RC: 0.502899  MSE: 0.163242  [105.270 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_13.pkl
+
+Validation: avg_loss: 0.6559 (0.6553,  0.0007)    RC: 0.512818  MSE: 0.163820  image_inference: 3179.524 us
+
+--------------------------------------------------------------------------------------
+027:43.208 - 14 [    0/ 10133 (0%)]  	Loss: 0.653612 (0.652941,  0.000670)  [7.655 sec]
+028:08.987 - 14 [ 2560/ 10133 (26%)]  	Loss: 0.654791 (0.654120,  0.000670)  [25.779 sec]
+028:35.025 - 14 [ 5120/ 10133 (51%)]  	Loss: 0.692332 (0.691662,  0.000670)  [26.038 sec]
+029:01.089 - 14 [ 7680/ 10133 (77%)]  	Loss: 0.608182 (0.607512,  0.000670)  [26.064 sec]
+029:21.766 - 14 RC: 0.509121  MSE: 0.158908  [106.212 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_14.pkl
+
+Validation: avg_loss: 0.6441 (0.6434,  0.0007)    RC: 0.522448  MSE: 0.160857  image_inference: 3178.854 us
+
+--------------------------------------------------------------------------------------
+029:50.842 - 15 [    0/ 10133 (0%)]  	Loss: 0.595460 (0.594789,  0.000670)  [7.770 sec]
+030:16.669 - 15 [ 2560/ 10133 (26%)]  	Loss: 0.674207 (0.673537,  0.000670)  [25.827 sec]
+030:42.664 - 15 [ 5120/ 10133 (51%)]  	Loss: 0.610287 (0.609617,  0.000670)  [25.995 sec]
+031:08.615 - 15 [ 7680/ 10133 (77%)]  	Loss: 0.652796 (0.652126,  0.000670)  [25.950 sec]
+031:29.279 - 15 RC: 0.546512  MSE: 0.158295  [106.207 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_15.pkl
+
+Validation: avg_loss: 0.6332 (0.6325,  0.0007)    RC: 0.524916  MSE: 0.158122  image_inference: 3164.306 us
+
+--------------------------------------------------------------------------------------
+031:58.615 - 16 [    0/ 10133 (0%)]  	Loss: 0.655752 (0.655082,  0.000670)  [7.976 sec]
+032:24.502 - 16 [ 2560/ 10133 (26%)]  	Loss: 0.623234 (0.622564,  0.000670)  [25.887 sec]
+032:50.376 - 16 [ 5120/ 10133 (51%)]  	Loss: 0.659767 (0.659097,  0.000670)  [25.874 sec]
+033:16.547 - 16 [ 7680/ 10133 (77%)]  	Loss: 0.616700 (0.616030,  0.000670)  [26.171 sec]
+033:37.209 - 16 RC: 0.524608  MSE: 0.156792  [106.570 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_16.pkl
+
+Validation: avg_loss: 0.6240 (0.6233,  0.0007)    RC: 0.528209  MSE: 0.155823  image_inference: 3166.802 us
+
+--------------------------------------------------------------------------------------
+034:07.758 - 17 [    0/ 10133 (0%)]  	Loss: 0.681136 (0.680465,  0.000670)  [9.107 sec]
+034:33.604 - 17 [ 2560/ 10133 (26%)]  	Loss: 0.613471 (0.612801,  0.000670)  [25.846 sec]
+034:59.340 - 17 [ 5120/ 10133 (51%)]  	Loss: 0.557915 (0.557245,  0.000670)  [25.736 sec]
+035:25.007 - 17 [ 7680/ 10133 (77%)]  	Loss: 0.637603 (0.636933,  0.000670)  [25.666 sec]
+035:45.408 - 17 RC: 0.531414  MSE: 0.156393  [106.757 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_17.pkl
+
+Validation: avg_loss: 0.6206 (0.6200,  0.0007)    RC: 0.531531  MSE: 0.154989  image_inference: 3168.492 us
+
+--------------------------------------------------------------------------------------
+036:13.951 - 18 [    0/ 10133 (0%)]  	Loss: 0.634928 (0.634258,  0.000670)  [7.237 sec]
+036:39.579 - 18 [ 2560/ 10133 (26%)]  	Loss: 0.595994 (0.595324,  0.000670)  [25.628 sec]
+037:05.243 - 18 [ 5120/ 10133 (51%)]  	Loss: 0.654914 (0.654244,  0.000670)  [25.664 sec]
+037:31.028 - 18 [ 7680/ 10133 (77%)]  	Loss: 0.592880 (0.592210,  0.000670)  [25.785 sec]
+037:51.457 - 18 RC: 0.538170  MSE: 0.152893  [104.744 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_18.pkl
+
+Validation: avg_loss: 0.6605 (0.6599,  0.0007)    RC: 0.534881  MSE: 0.164965  image_inference: 3181.579 us
+
+--------------------------------------------------------------------------------------
+038:20.944 - 19 [    0/ 10133 (0%)]  	Loss: 0.584101 (0.583430,  0.000670)  [7.913 sec]
+038:46.663 - 19 [ 2560/ 10133 (26%)]  	Loss: 0.685637 (0.684967,  0.000670)  [25.719 sec]
+039:12.328 - 19 [ 5120/ 10133 (51%)]  	Loss: 0.630838 (0.630168,  0.000670)  [25.665 sec]
+039:38.076 - 19 [ 7680/ 10133 (77%)]  	Loss: 0.684494 (0.683824,  0.000670)  [25.747 sec]
+039:58.482 - 19 RC: 0.543422  MSE: 0.153892  [105.451 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_19.pkl
+
+Validation: avg_loss: 0.6622 (0.6616,  0.0007)    RC: 0.540760  MSE: 0.165391  image_inference: 3167.649 us
+
+--------------------------------------------------------------------------------------
+040:27.757 - 20 [    0/ 10133 (0%)]  	Loss: 0.638428 (0.637758,  0.000670)  [7.877 sec]
+040:53.515 - 20 [ 2560/ 10133 (26%)]  	Loss: 0.630018 (0.629348,  0.000671)  [25.758 sec]
+041:19.420 - 20 [ 5120/ 10133 (51%)]  	Loss: 0.651539 (0.650869,  0.000670)  [25.905 sec]
+041:45.547 - 20 [ 7680/ 10133 (77%)]  	Loss: 0.599125 (0.598455,  0.000670)  [26.127 sec]
+042:06.194 - 20 RC: 0.535513  MSE: 0.154712  [106.313 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_20.pkl
+
+Validation: avg_loss: 0.6152 (0.6146,  0.0007)    RC: 0.540609  MSE: 0.153638  image_inference: 3174.017 us
+
+--------------------------------------------------------------------------------------
+042:36.137 - 21 [    0/ 10133 (0%)]  	Loss: 0.712735 (0.712065,  0.000670)  [8.423 sec]
+043:02.067 - 21 [ 2560/ 10133 (26%)]  	Loss: 0.646568 (0.645897,  0.000671)  [25.930 sec]
+043:27.773 - 21 [ 5120/ 10133 (51%)]  	Loss: 0.609053 (0.608383,  0.000670)  [25.706 sec]
+043:53.464 - 21 [ 7680/ 10133 (77%)]  	Loss: 0.515570 (0.514899,  0.000670)  [25.691 sec]
+044:13.911 - 21 RC: 0.555914  MSE: 0.150597  [106.197 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_21.pkl
+
+Validation: avg_loss: 0.6268 (0.6261,  0.0007)    RC: 0.541073  MSE: 0.156535  image_inference: 3173.926 us
+
+--------------------------------------------------------------------------------------
+044:43.104 - 22 [    0/ 10133 (0%)]  	Loss: 0.553910 (0.553239,  0.000671)  [7.916 sec]
+045:08.767 - 22 [ 2560/ 10133 (26%)]  	Loss: 0.562509 (0.561838,  0.000670)  [25.663 sec]
+045:34.439 - 22 [ 5120/ 10133 (51%)]  	Loss: 0.611823 (0.611153,  0.000670)  [25.672 sec]
+046:00.211 - 22 [ 7680/ 10133 (77%)]  	Loss: 0.593464 (0.592794,  0.000670)  [25.772 sec]
+046:20.657 - 22 RC: 0.546921  MSE: 0.149181  [105.469 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_22.pkl
+
+Validation: avg_loss: 0.6189 (0.6182,  0.0007)    RC: 0.538745  MSE: 0.154552  image_inference: 3177.982 us
+
+--------------------------------------------------------------------------------------
+046:49.739 - 23 [    0/ 10133 (0%)]  	Loss: 0.619192 (0.618521,  0.000670)  [7.655 sec]
+047:15.331 - 23 [ 2560/ 10133 (26%)]  	Loss: 0.630682 (0.630012,  0.000671)  [25.593 sec]
+047:40.941 - 23 [ 5120/ 10133 (51%)]  	Loss: 0.500389 (0.499718,  0.000670)  [25.610 sec]
+048:06.623 - 23 [ 7680/ 10133 (77%)]  	Loss: 0.658842 (0.658172,  0.000670)  [25.681 sec]
+048:26.994 - 23 RC: 0.558848  MSE: 0.147168  [104.910 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_23.pkl
+
+Validation: avg_loss: 0.6565 (0.6558,  0.0007)    RC: 0.531318  MSE: 0.163958  image_inference: 3173.882 us
+
+--------------------------------------------------------------------------------------
+048:56.601 - 24 [    0/ 10133 (0%)]  	Loss: 0.553745 (0.553075,  0.000670)  [8.098 sec]
+049:22.222 - 24 [ 2560/ 10133 (26%)]  	Loss: 0.562016 (0.561345,  0.000670)  [25.621 sec]
+049:47.944 - 24 [ 5120/ 10133 (51%)]  	Loss: 0.631130 (0.630460,  0.000670)  [25.722 sec]
+050:13.686 - 24 [ 7680/ 10133 (77%)]  	Loss: 0.591526 (0.590855,  0.000671)  [25.742 sec]
+050:34.095 - 24 RC: 0.539979  MSE: 0.149662  [105.592 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_24.pkl
+
+Validation: avg_loss: 0.7039 (0.7032,  0.0007)    RC: 0.537516  MSE: 0.175797  image_inference: 3172.636 us
+
+--------------------------------------------------------------------------------------
+051:03.220 - 25 [    0/ 10133 (0%)]  	Loss: 0.535489 (0.534818,  0.000671)  [7.789 sec]
+051:28.810 - 25 [ 2560/ 10133 (26%)]  	Loss: 0.597009 (0.596339,  0.000670)  [25.590 sec]
+051:54.557 - 25 [ 5120/ 10133 (51%)]  	Loss: 0.624442 (0.623772,  0.000671)  [25.747 sec]
+052:20.340 - 25 [ 7680/ 10133 (77%)]  	Loss: 0.627047 (0.626377,  0.000670)  [25.782 sec]
+052:40.916 - 25 RC: 0.554732  MSE: 0.145801  [105.485 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_25.pkl
+
+Validation: avg_loss: 0.6021 (0.6015,  0.0007)    RC: 0.545092  MSE: 0.150368  image_inference: 3174.680 us
+
+--------------------------------------------------------------------------------------
+053:09.634 - 26 [    0/ 10133 (0%)]  	Loss: 0.606377 (0.605707,  0.000670)  [7.370 sec]
+053:35.575 - 26 [ 2560/ 10133 (26%)]  	Loss: 0.580415 (0.579745,  0.000670)  [25.942 sec]
+054:01.491 - 26 [ 5120/ 10133 (51%)]  	Loss: 0.555271 (0.554600,  0.000670)  [25.916 sec]
+054:27.478 - 26 [ 7680/ 10133 (77%)]  	Loss: 0.652459 (0.651789,  0.000671)  [25.987 sec]
+054:48.018 - 26 RC: 0.555485  MSE: 0.143525  [105.755 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_26.pkl
+
+Validation: avg_loss: 0.6061 (0.6054,  0.0007)    RC: 0.543300  MSE: 0.151345  image_inference: 3168.357 us
+
+--------------------------------------------------------------------------------------
+055:16.880 - 27 [    0/ 10133 (0%)]  	Loss: 0.590320 (0.589650,  0.000670)  [7.631 sec]
+055:42.461 - 27 [ 2560/ 10133 (26%)]  	Loss: 0.567621 (0.566951,  0.000670)  [25.580 sec]
+056:08.091 - 27 [ 5120/ 10133 (51%)]  	Loss: 0.579303 (0.578632,  0.000670)  [25.631 sec]
+056:33.907 - 27 [ 7680/ 10133 (77%)]  	Loss: 0.576937 (0.576267,  0.000670)  [25.816 sec]
+056:54.335 - 27 RC: 0.555911  MSE: 0.142157  [105.086 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_27.pkl
+
+Validation: avg_loss: 0.6066 (0.6059,  0.0007)    RC: 0.545292  MSE: 0.151486  image_inference: 3161.907 us
+
+--------------------------------------------------------------------------------------
+057:24.072 - 28 [    0/ 10133 (0%)]  	Loss: 0.524548 (0.523877,  0.000670)  [8.564 sec]
+057:49.652 - 28 [ 2560/ 10133 (26%)]  	Loss: 0.517410 (0.516739,  0.000670)  [25.579 sec]
+058:15.258 - 28 [ 5120/ 10133 (51%)]  	Loss: 0.516061 (0.515391,  0.000670)  [25.607 sec]
+058:40.907 - 28 [ 7680/ 10133 (77%)]  	Loss: 0.617763 (0.617092,  0.000670)  [25.648 sec]
+059:01.361 - 28 RC: 0.570528  MSE: 0.143014  [105.852 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_28.pkl
+
+Validation: avg_loss: 0.5981 (0.5974,  0.0007)    RC: 0.548634  MSE: 0.149357  image_inference: 3179.976 us
+
+--------------------------------------------------------------------------------------
+059:30.737 - 29 [    0/ 10133 (0%)]  	Loss: 0.588459 (0.587789,  0.000670)  [7.945 sec]
+059:56.420 - 29 [ 2560/ 10133 (26%)]  	Loss: 0.577380 (0.576709,  0.000670)  [25.683 sec]
+060:22.270 - 29 [ 5120/ 10133 (51%)]  	Loss: 0.543595 (0.542925,  0.000670)  [25.849 sec]
+060:48.334 - 29 [ 7680/ 10133 (77%)]  	Loss: 0.550935 (0.550265,  0.000670)  [26.064 sec]
+061:08.714 - 29 RC: 0.570907  MSE: 0.142048  [105.921 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_29.pkl
+
+Validation: avg_loss: 0.5915 (0.5908,  0.0007)    RC: 0.555678  MSE: 0.147710  image_inference: 3182.327 us
+
+--------------------------------------------------------------------------------------
+061:37.864 - 30 [    0/ 10133 (0%)]  	Loss: 0.595162 (0.594492,  0.000670)  [7.731 sec]
+062:03.480 - 30 [ 2560/ 10133 (26%)]  	Loss: 0.479749 (0.479078,  0.000670)  [25.616 sec]
+062:29.036 - 30 [ 5120/ 10133 (51%)]  	Loss: 0.607103 (0.606433,  0.000670)  [25.556 sec]
+062:54.713 - 30 [ 7680/ 10133 (77%)]  	Loss: 0.568739 (0.568068,  0.000671)  [25.677 sec]
+063:15.067 - 30 RC: 0.564569  MSE: 0.142054  [104.933 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_30.pkl
+
+Validation: avg_loss: 0.6045 (0.6039,  0.0007)    RC: 0.550910  MSE: 0.150963  image_inference: 3176.974 us
+
+--------------------------------------------------------------------------------------
+063:44.014 - 31 [    0/ 10133 (0%)]  	Loss: 0.593050 (0.592379,  0.000670)  [7.668 sec]
+064:09.659 - 31 [ 2560/ 10133 (26%)]  	Loss: 0.513893 (0.513222,  0.000670)  [25.644 sec]
+064:35.243 - 31 [ 5120/ 10133 (51%)]  	Loss: 0.594355 (0.593684,  0.000670)  [25.584 sec]
+065:00.912 - 31 [ 7680/ 10133 (77%)]  	Loss: 0.554151 (0.553480,  0.000670)  [25.669 sec]
+065:21.334 - 31 RC: 0.582281  MSE: 0.138506  [104.987 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_31.pkl
+
+Validation: avg_loss: 0.6155 (0.6148,  0.0007)    RC: 0.548812  MSE: 0.153712  image_inference: 3177.094 us
+
+--------------------------------------------------------------------------------------
+065:50.571 - 32 [    0/ 10133 (0%)]  	Loss: 0.551606 (0.550935,  0.000670)  [7.905 sec]
+066:16.141 - 32 [ 2560/ 10133 (26%)]  	Loss: 0.559384 (0.558713,  0.000670)  [25.570 sec]
+066:41.784 - 32 [ 5120/ 10133 (51%)]  	Loss: 0.566667 (0.565996,  0.000671)  [25.643 sec]
+067:07.500 - 32 [ 7680/ 10133 (77%)]  	Loss: 0.479975 (0.479304,  0.000670)  [25.716 sec]
+067:27.875 - 32 RC: 0.582366  MSE: 0.135315  [105.210 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_32.pkl
+
+Validation: avg_loss: 0.6561 (0.6554,  0.0007)    RC: 0.546553  MSE: 0.163852  image_inference: 3168.774 us
+
+--------------------------------------------------------------------------------------
+067:57.069 - 33 [    0/ 10133 (0%)]  	Loss: 0.554456 (0.553785,  0.000670)  [7.857 sec]
+068:22.652 - 33 [ 2560/ 10133 (26%)]  	Loss: 0.624155 (0.623485,  0.000670)  [25.582 sec]
+068:48.328 - 33 [ 5120/ 10133 (51%)]  	Loss: 0.536664 (0.535994,  0.000670)  [25.676 sec]
+069:14.009 - 33 [ 7680/ 10133 (77%)]  	Loss: 0.522717 (0.522046,  0.000670)  [25.681 sec]
+069:34.399 - 33 RC: 0.570774  MSE: 0.138434  [105.187 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_33.pkl
+
+Validation: avg_loss: 0.6568 (0.6561,  0.0007)    RC: 0.549993  MSE: 0.164032  image_inference: 3166.133 us
+
+--------------------------------------------------------------------------------------
+070:03.591 - 34 [    0/ 10133 (0%)]  	Loss: 0.484832 (0.484162,  0.000670)  [7.823 sec]
+070:29.320 - 34 [ 2560/ 10133 (26%)]  	Loss: 0.528274 (0.527603,  0.000671)  [25.729 sec]
+070:54.897 - 34 [ 5120/ 10133 (51%)]  	Loss: 0.527129 (0.526459,  0.000670)  [25.577 sec]
+071:20.504 - 34 [ 7680/ 10133 (77%)]  	Loss: 0.533178 (0.532507,  0.000671)  [25.607 sec]
+071:40.901 - 34 RC: 0.555792  MSE: 0.136491  [105.133 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_34.pkl
+
+Validation: avg_loss: 0.5936 (0.5929,  0.0007)    RC: 0.556624  MSE: 0.148229  image_inference: 3170.568 us
+
+--------------------------------------------------------------------------------------
+072:09.984 - 35 [    0/ 10133 (0%)]  	Loss: 0.569974 (0.569303,  0.000671)  [7.631 sec]
+072:35.615 - 35 [ 2560/ 10133 (26%)]  	Loss: 0.543209 (0.542539,  0.000671)  [25.631 sec]
+073:01.216 - 35 [ 5120/ 10133 (51%)]  	Loss: 0.461297 (0.460626,  0.000671)  [25.600 sec]
+073:26.864 - 35 [ 7680/ 10133 (77%)]  	Loss: 0.628465 (0.627794,  0.000671)  [25.648 sec]
+073:47.203 - 35 RC: 0.582602  MSE: 0.134774  [104.850 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_35.pkl
+
+Validation: avg_loss: 0.6410 (0.6404,  0.0007)    RC: 0.555564  MSE: 0.160093  image_inference: 3161.491 us
+
+--------------------------------------------------------------------------------------
+074:16.452 - 36 [    0/ 10133 (0%)]  	Loss: 0.559369 (0.558699,  0.000671)  [7.842 sec]
+074:41.980 - 36 [ 2560/ 10133 (26%)]  	Loss: 0.577308 (0.576637,  0.000671)  [25.528 sec]
+075:07.529 - 36 [ 5120/ 10133 (51%)]  	Loss: 0.531953 (0.531283,  0.000671)  [25.549 sec]
+075:33.158 - 36 [ 7680/ 10133 (77%)]  	Loss: 0.501310 (0.500639,  0.000671)  [25.630 sec]
+075:53.534 - 36 RC: 0.596771  MSE: 0.132523  [104.924 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_36.pkl
+
+Validation: avg_loss: 0.6930 (0.6923,  0.0007)    RC: 0.543874  MSE: 0.173077  image_inference: 3179.338 us
+
+--------------------------------------------------------------------------------------
+076:22.576 - 37 [    0/ 10133 (0%)]  	Loss: 0.562902 (0.562232,  0.000671)  [7.674 sec]
+076:48.251 - 37 [ 2560/ 10133 (26%)]  	Loss: 0.587190 (0.586520,  0.000671)  [25.675 sec]
+077:13.868 - 37 [ 5120/ 10133 (51%)]  	Loss: 0.582713 (0.582043,  0.000671)  [25.617 sec]
+077:39.570 - 37 [ 7680/ 10133 (77%)]  	Loss: 0.548861 (0.548190,  0.000671)  [25.703 sec]
+077:59.959 - 37 RC: 0.577014  MSE: 0.137531  [105.057 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_37.pkl
+
+Validation: avg_loss: 0.6616 (0.6610,  0.0007)    RC: 0.553704  MSE: 0.165239  image_inference: 3171.932 us
+
+--------------------------------------------------------------------------------------
+078:28.633 - 38 [    0/ 10133 (0%)]  	Loss: 0.514566 (0.513895,  0.000671)  [7.408 sec]
+078:54.102 - 38 [ 2560/ 10133 (26%)]  	Loss: 0.452867 (0.452196,  0.000670)  [25.469 sec]
+079:19.706 - 38 [ 5120/ 10133 (51%)]  	Loss: 0.513949 (0.513278,  0.000671)  [25.604 sec]
+079:45.306 - 38 [ 7680/ 10133 (77%)]  	Loss: 0.443819 (0.443148,  0.000670)  [25.601 sec]
+080:05.655 - 38 RC: 0.589734  MSE: 0.130080  [104.429 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_38.pkl
+
+Validation: avg_loss: 0.6479 (0.6472,  0.0007)    RC: 0.555817  MSE: 0.161799  image_inference: 3157.566 us
+
+--------------------------------------------------------------------------------------
+080:34.668 - 39 [    0/ 10133 (0%)]  	Loss: 0.503120 (0.502450,  0.000671)  [7.695 sec]
+081:00.225 - 39 [ 2560/ 10133 (26%)]  	Loss: 0.485097 (0.484427,  0.000670)  [25.557 sec]
+081:25.908 - 39 [ 5120/ 10133 (51%)]  	Loss: 0.510002 (0.509331,  0.000671)  [25.683 sec]
+081:51.596 - 39 [ 7680/ 10133 (77%)]  	Loss: 0.468511 (0.467841,  0.000670)  [25.689 sec]
+082:12.024 - 39 RC: 0.589600  MSE: 0.127229  [105.051 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_39.pkl
+
+Validation: avg_loss: 0.6946 (0.6939,  0.0007)    RC: 0.545309  MSE: 0.173480  image_inference: 3178.072 us
+
+--------------------------------------------------------------------------------------
+082:40.961 - 40 [    0/ 10133 (0%)]  	Loss: 0.504591 (0.503921,  0.000671)  [7.478 sec]
+083:06.504 - 40 [ 2560/ 10133 (26%)]  	Loss: 0.519707 (0.519036,  0.000670)  [25.543 sec]
+083:32.111 - 40 [ 5120/ 10133 (51%)]  	Loss: 0.534384 (0.533714,  0.000671)  [25.607 sec]
+083:57.791 - 40 [ 7680/ 10133 (77%)]  	Loss: 0.435365 (0.434694,  0.000670)  [25.680 sec]
+084:18.208 - 40 RC: 0.591328  MSE: 0.130224  [104.726 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_40.pkl
+
+Validation: avg_loss: 0.5816 (0.5810,  0.0007)    RC: 0.562697  MSE: 0.145238  image_inference: 3177.682 us
+
+--------------------------------------------------------------------------------------
+084:47.395 - 41 [    0/ 10133 (0%)]  	Loss: 0.456606 (0.455936,  0.000671)  [7.850 sec]
+085:12.970 - 41 [ 2560/ 10133 (26%)]  	Loss: 0.508724 (0.508054,  0.000670)  [25.575 sec]
+085:38.501 - 41 [ 5120/ 10133 (51%)]  	Loss: 0.593598 (0.592927,  0.000670)  [25.531 sec]
+086:04.221 - 41 [ 7680/ 10133 (77%)]  	Loss: 0.570426 (0.569756,  0.000671)  [25.720 sec]
+086:24.621 - 41 RC: 0.613594  MSE: 0.125221  [105.076 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_41.pkl
+
+Validation: avg_loss: 0.6281 (0.6275,  0.0007)    RC: 0.551734  MSE: 0.156864  image_inference: 3172.044 us
+
+--------------------------------------------------------------------------------------
+086:53.434 - 42 [    0/ 10133 (0%)]  	Loss: 0.450737 (0.450066,  0.000670)  [7.470 sec]
+087:19.045 - 42 [ 2560/ 10133 (26%)]  	Loss: 0.568953 (0.568282,  0.000670)  [25.611 sec]
+087:44.581 - 42 [ 5120/ 10133 (51%)]  	Loss: 0.598932 (0.598262,  0.000670)  [25.536 sec]
+088:10.179 - 42 [ 7680/ 10133 (77%)]  	Loss: 0.590893 (0.590223,  0.000671)  [25.598 sec]
+088:30.551 - 42 RC: 0.587157  MSE: 0.128685  [104.588 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_42.pkl
+
+Validation: avg_loss: 0.5894 (0.5888,  0.0007)    RC: 0.558376  MSE: 0.147188  image_inference: 3170.342 us
+
+--------------------------------------------------------------------------------------
+088:59.256 - 43 [    0/ 10133 (0%)]  	Loss: 0.460389 (0.459718,  0.000671)  [7.382 sec]
+089:24.869 - 43 [ 2560/ 10133 (26%)]  	Loss: 0.481976 (0.481305,  0.000671)  [25.614 sec]
+089:50.587 - 43 [ 5120/ 10133 (51%)]  	Loss: 0.510027 (0.509357,  0.000670)  [25.718 sec]
+090:16.247 - 43 [ 7680/ 10133 (77%)]  	Loss: 0.493201 (0.492531,  0.000671)  [25.660 sec]
+090:36.707 - 43 RC: 0.601982  MSE: 0.125202  [104.833 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_43.pkl
+
+Validation: avg_loss: 0.6520 (0.6513,  0.0007)    RC: 0.560578  MSE: 0.162836  image_inference: 3161.258 us
+
+--------------------------------------------------------------------------------------
+091:05.748 - 44 [    0/ 10133 (0%)]  	Loss: 0.487332 (0.486661,  0.000670)  [7.723 sec]
+091:31.325 - 44 [ 2560/ 10133 (26%)]  	Loss: 0.419412 (0.418742,  0.000671)  [25.577 sec]
+091:56.992 - 44 [ 5120/ 10133 (51%)]  	Loss: 0.519168 (0.518498,  0.000671)  [25.667 sec]
+092:22.615 - 44 [ 7680/ 10133 (77%)]  	Loss: 0.506609 (0.505938,  0.000671)  [25.623 sec]
+092:42.985 - 44 RC: 0.604924  MSE: 0.127541  [104.960 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_44.pkl
+
+Validation: avg_loss: 0.6031 (0.6025,  0.0007)    RC: 0.564920  MSE: 0.150614  image_inference: 3165.119 us
+
+--------------------------------------------------------------------------------------
+093:12.248 - 45 [    0/ 10133 (0%)]  	Loss: 0.594257 (0.593587,  0.000671)  [7.863 sec]
+093:37.872 - 45 [ 2560/ 10133 (26%)]  	Loss: 0.511898 (0.511227,  0.000671)  [25.624 sec]
+094:03.518 - 45 [ 5120/ 10133 (51%)]  	Loss: 0.494013 (0.493343,  0.000671)  [25.646 sec]
+094:29.218 - 45 [ 7680/ 10133 (77%)]  	Loss: 0.483582 (0.482911,  0.000671)  [25.700 sec]
+094:49.602 - 45 RC: 0.605552  MSE: 0.127926  [105.218 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_45.pkl
+
+Validation: avg_loss: 0.6355 (0.6348,  0.0007)    RC: 0.562127  MSE: 0.158700  image_inference: 3169.516 us
+
+--------------------------------------------------------------------------------------
+095:18.914 - 46 [    0/ 10133 (0%)]  	Loss: 0.490335 (0.489665,  0.000671)  [8.020 sec]
+095:44.475 - 46 [ 2560/ 10133 (26%)]  	Loss: 0.487213 (0.486543,  0.000671)  [25.562 sec]
+096:10.111 - 46 [ 5120/ 10133 (51%)]  	Loss: 0.562349 (0.561679,  0.000671)  [25.636 sec]
+096:35.906 - 46 [ 7680/ 10133 (77%)]  	Loss: 0.566059 (0.565388,  0.000671)  [25.795 sec]
+096:56.328 - 46 RC: 0.608485  MSE: 0.125235  [105.435 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_46.pkl
+
+Validation: avg_loss: 0.5760 (0.5753,  0.0007)    RC: 0.567569  MSE: 0.143834  image_inference: 3172.373 us
+
+--------------------------------------------------------------------------------------
+097:25.522 - 47 [    0/ 10133 (0%)]  	Loss: 0.506278 (0.505607,  0.000671)  [7.746 sec]
+097:51.156 - 47 [ 2560/ 10133 (26%)]  	Loss: 0.508119 (0.507449,  0.000671)  [25.634 sec]
+098:16.794 - 47 [ 5120/ 10133 (51%)]  	Loss: 0.419504 (0.418834,  0.000671)  [25.638 sec]
+098:42.401 - 47 [ 7680/ 10133 (77%)]  	Loss: 0.467601 (0.466930,  0.000671)  [25.607 sec]
+099:02.861 - 47 RC: 0.606421  MSE: 0.121865  [105.084 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_47.pkl
+
+Validation: avg_loss: 0.6249 (0.6242,  0.0007)    RC: 0.560475  MSE: 0.156049  image_inference: 3164.702 us
+
+--------------------------------------------------------------------------------------
+099:31.844 - 48 [    0/ 10133 (0%)]  	Loss: 0.504643 (0.503972,  0.000671)  [7.746 sec]
+099:57.468 - 48 [ 2560/ 10133 (26%)]  	Loss: 0.481221 (0.480550,  0.000671)  [25.624 sec]
+100:23.077 - 48 [ 5120/ 10133 (51%)]  	Loss: 0.542471 (0.541800,  0.000671)  [25.609 sec]
+100:48.710 - 48 [ 7680/ 10133 (77%)]  	Loss: 0.527270 (0.526599,  0.000671)  [25.633 sec]
+101:09.110 - 48 RC: 0.601297  MSE: 0.125879  [105.012 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_48.pkl
+
+Validation: avg_loss: 0.6060 (0.6053,  0.0007)    RC: 0.561338  MSE: 0.151325  image_inference: 3172.406 us
+
+--------------------------------------------------------------------------------------
+101:38.127 - 49 [    0/ 10133 (0%)]  	Loss: 0.505513 (0.504843,  0.000671)  [7.761 sec]
+102:03.705 - 49 [ 2560/ 10133 (26%)]  	Loss: 0.503182 (0.502511,  0.000671)  [25.578 sec]
+102:29.359 - 49 [ 5120/ 10133 (51%)]  	Loss: 0.496394 (0.495724,  0.000671)  [25.653 sec]
+102:55.104 - 49 [ 7680/ 10133 (77%)]  	Loss: 0.488408 (0.487738,  0.000671)  [25.746 sec]
+103:15.538 - 49 RC: 0.614612  MSE: 0.125846  [105.172 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_49.pkl
+
+Validation: avg_loss: 0.5992 (0.5986,  0.0007)    RC: 0.568674  MSE: 0.149639  image_inference: 3178.788 us
+
+--------------------------------------------------------------------------------------
+103:45.050 - 50 [    0/ 10133 (0%)]  	Loss: 0.433800 (0.433129,  0.000671)  [8.158 sec]
+104:10.721 - 50 [ 2560/ 10133 (26%)]  	Loss: 0.478509 (0.477838,  0.000671)  [25.672 sec]
+104:36.391 - 50 [ 5120/ 10133 (51%)]  	Loss: 0.429742 (0.429072,  0.000671)  [25.670 sec]
+105:02.034 - 50 [ 7680/ 10133 (77%)]  	Loss: 0.588540 (0.587870,  0.000671)  [25.642 sec]
+105:22.473 - 50 RC: 0.622602  MSE: 0.121259  [105.581 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_50.pkl
+
+Validation: avg_loss: 0.5903 (0.5897,  0.0007)    RC: 0.564302  MSE: 0.147414  image_inference: 3162.808 us
+
+--------------------------------------------------------------------------------------
+105:51.781 - 51 [    0/ 10133 (0%)]  	Loss: 0.391229 (0.390558,  0.000671)  [8.003 sec]
+106:17.361 - 51 [ 2560/ 10133 (26%)]  	Loss: 0.566039 (0.565369,  0.000671)  [25.579 sec]
+106:43.085 - 51 [ 5120/ 10133 (51%)]  	Loss: 0.438185 (0.437514,  0.000671)  [25.724 sec]
+107:08.852 - 51 [ 7680/ 10133 (77%)]  	Loss: 0.470765 (0.470094,  0.000671)  [25.768 sec]
+107:29.261 - 51 RC: 0.625469  MSE: 0.118440  [105.482 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_51.pkl
+
+Validation: avg_loss: 0.6915 (0.6909,  0.0007)    RC: 0.561309  MSE: 0.172716  image_inference: 3181.306 us
+
+--------------------------------------------------------------------------------------
+107:58.323 - 52 [    0/ 10133 (0%)]  	Loss: 0.399045 (0.398375,  0.000671)  [7.663 sec]
+108:23.986 - 52 [ 2560/ 10133 (26%)]  	Loss: 0.503834 (0.503163,  0.000671)  [25.663 sec]
+108:49.599 - 52 [ 5120/ 10133 (51%)]  	Loss: 0.482654 (0.481984,  0.000671)  [25.613 sec]
+109:15.372 - 52 [ 7680/ 10133 (77%)]  	Loss: 0.492511 (0.491840,  0.000671)  [25.773 sec]
+109:35.777 - 52 RC: 0.609760  MSE: 0.123999  [105.117 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_52.pkl
+
+Validation: avg_loss: 0.7143 (0.7136,  0.0007)    RC: 0.563504  MSE: 0.178397  image_inference: 3172.318 us
+
+--------------------------------------------------------------------------------------
+110:05.234 - 53 [    0/ 10133 (0%)]  	Loss: 0.475491 (0.474820,  0.000671)  [8.140 sec]
+110:30.796 - 53 [ 2560/ 10133 (26%)]  	Loss: 0.389176 (0.388505,  0.000671)  [25.561 sec]
+110:56.350 - 53 [ 5120/ 10133 (51%)]  	Loss: 0.397927 (0.397257,  0.000671)  [25.554 sec]
+111:22.119 - 53 [ 7680/ 10133 (77%)]  	Loss: 0.436846 (0.436176,  0.000671)  [25.769 sec]
+111:42.610 - 53 RC: 0.618646  MSE: 0.115210  [105.515 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_53.pkl
+
+Validation: avg_loss: 0.6026 (0.6020,  0.0007)    RC: 0.560829  MSE: 0.150488  image_inference: 3170.091 us
+
+--------------------------------------------------------------------------------------
+112:11.781 - 54 [    0/ 10133 (0%)]  	Loss: 0.474693 (0.474023,  0.000671)  [7.552 sec]
+112:37.435 - 54 [ 2560/ 10133 (26%)]  	Loss: 0.550437 (0.549767,  0.000671)  [25.654 sec]
+113:03.198 - 54 [ 5120/ 10133 (51%)]  	Loss: 0.395411 (0.394740,  0.000671)  [25.763 sec]
+113:28.997 - 54 [ 7680/ 10133 (77%)]  	Loss: 0.439405 (0.438734,  0.000671)  [25.800 sec]
+113:49.505 - 54 RC: 0.615775  MSE: 0.117352  [105.276 sec]
+Saving checkpoint:  /media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/lamem_ResNet50FC_lstm3_train_0/weights_54.pkl
+
+Validation: avg_loss: 0.6276 (0.6270,  0.0007)    RC: 0.561261  MSE: 0.156745  image_inference: 3168.834 us
+

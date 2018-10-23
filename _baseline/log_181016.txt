@@ -1,0 +1,600 @@
+Packages & system versions:
+----------------------------------------------------------------------
+PIL :  1.1.7
+python :  3
+platform :  Linux-3.10.0-514.el7.x86_64-x86_64-with-centos-7.3.1611-Core
+cudnn :  6021
+display :  	NVRM version: NVIDIA UNIX x86_64 Kernel Module  375.26  Thu Dec  8 18:36:43 PST 2016
+	GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC)
+numpy :  1.13.0
+cuda :  	CUDA Version 8.0.61
+torchvision :  0.1.9
+torch :  0.2.0_2
+OpenCV :  3.2.0
+
+Configuration
+----------------------------------------------------------------------
+[0] cuda_device: 0
+[1] dataset_name: lamem
+[2] dataset_root: /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/
+[3] epoch_max: 55
+[4] epoch_start: 0
+[5] eval_images: 
+[6] experiment_name: lamem_ResNet50FC_lstm3_train_1
+[7] front_end_cnn: ResNet50FC
+[8] gamma: 1e-05
+[9] images_dir: images
+[10] img_mean: [0.485, 0.456, 0.406]
+[11] img_std: [0.229, 0.224, 0.225]
+[12] l2_req: 1e-06
+[13] last_step_prediction: False
+[14] lr: [0.0001]
+[15] lr_epochs: [0]
+[16] mem_loc_w: [1.0, 0.10000000149011612, 0.009999999776482582]
+[17] model_weights: 
+[18] omega: 0
+[19] seq_steps: 3
+[20] splits_dir: splits
+[21] target_mean: 0.754
+[22] target_scale: 2.0
+[23] test_batch_size: 222
+[24] test_split: 
+[25] torch_version_major: 0
+[26] torch_version_minor: 2
+[27] torchvision_version_major: 0
+[28] torchvision_version_minor: 1
+[29] train_batch_size: 222
+[30] train_split: train_1
+[31] use_attention: True
+[32] use_cuda: True
+[33] val_split: val_1
+
+Curent CUDA device:  0
+data/lamem_ResNet50FC_lstm3_train_1
+train_log_0.csv
+Loading checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_0.pkl
+Cannot open file:  data/lamem_ResNet50FC_lstm3_train_1/weights_0.pkl
+Loaded dataset:
+	 /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/splits/train_1.txt
+	train:  True
+	samples:  9000
+	batch size:  222
+	num_workers:  8
+Loaded dataset:
+	 /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/splits/val_1.txt
+	train:  False
+	samples:  1666
+	batch size:  222
+	num_workers:  8
+--------------------------------------------------------------------------------------
+Epoch:  1   Setting new learning rate:  0.0001
+THCudaCheck FAIL file=/pytorch/torch/lib/THC/generic/THCStorage.cu line=66 error=2 : out of memory
+Traceback (most recent call last):
+  File "main.py", line 106, in <module>
+    main()
+  File "main.py", line 101, in main
+    amnet.train()
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet.py", line 466, in train
+    self.train_epoch(epoch, train_data_loader)
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet.py", line 394, in train_epoch
+    output, outputs, alphas = self.model(data)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/modules/module.py", line 224, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet_model.py", line 242, in forward
+    eh = self.drop50(eh)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/modules/module.py", line 224, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/modules/dropout.py", line 46, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/functional.py", line 416, in dropout
+    return _functions.dropout.Dropout.apply(input, p, training, inplace)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/_functions/dropout.py", line 29, in forward
+    ctx.noise = cls._make_noise(input)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/_functions/dropout.py", line 11, in _make_noise
+    return input.new().resize_as_(input)
+RuntimeError: cuda runtime error (2) : out of memory at /pytorch/torch/lib/THC/generic/THCStorage.cu:66
+Packages & system versions:
+----------------------------------------------------------------------
+platform :  Linux-3.10.0-514.el7.x86_64-x86_64-with-centos-7.3.1611-Core
+torchvision :  0.1.9
+torch :  0.2.0_2
+numpy :  1.13.0
+cudnn :  6021
+display :  	NVRM version: NVIDIA UNIX x86_64 Kernel Module  375.26  Thu Dec  8 18:36:43 PST 2016
+	GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC)
+cuda :  	CUDA Version 8.0.61
+PIL :  1.1.7
+python :  3
+OpenCV :  3.2.0
+
+Configuration
+----------------------------------------------------------------------
+[0] cuda_device: 0
+[1] dataset_name: lamem
+[2] dataset_root: /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/
+[3] epoch_max: 55
+[4] epoch_start: 0
+[5] eval_images: 
+[6] experiment_name: lamem_ResNet50FC_lstm3_train_1
+[7] front_end_cnn: ResNet50FC
+[8] gamma: 1e-05
+[9] images_dir: images
+[10] img_mean: [0.485, 0.456, 0.406]
+[11] img_std: [0.229, 0.224, 0.225]
+[12] l2_req: 1e-06
+[13] last_step_prediction: False
+[14] lr: [0.0001]
+[15] lr_epochs: [0]
+[16] mem_loc_w: [1.0, 0.10000000149011612, 0.009999999776482582]
+[17] model_weights: 
+[18] omega: 0
+[19] seq_steps: 3
+[20] splits_dir: splits
+[21] target_mean: 0.754
+[22] target_scale: 2.0
+[23] test_batch_size: 222
+[24] test_split: 
+[25] torch_version_major: 0
+[26] torch_version_minor: 2
+[27] torchvision_version_major: 0
+[28] torchvision_version_minor: 1
+[29] train_batch_size: 222
+[30] train_split: train_1
+[31] use_attention: True
+[32] use_cuda: True
+[33] val_split: val_1
+
+Curent CUDA device:  0
+data/lamem_ResNet50FC_lstm3_train_1
+train_log_0.csv
+Loading checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_0.pkl
+Cannot open file:  data/lamem_ResNet50FC_lstm3_train_1/weights_0.pkl
+Loaded dataset:
+	 /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/splits/train_1.txt
+	train:  True
+	samples:  9000
+	batch size:  222
+	num_workers:  8
+Loaded dataset:
+	 /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/splits/val_1.txt
+	train:  False
+	samples:  1666
+	batch size:  222
+	num_workers:  8
+--------------------------------------------------------------------------------------
+Epoch:  1   Setting new learning rate:  0.0001
+THCudaCheck FAIL file=/pytorch/torch/lib/THC/generic/THCStorage.cu line=66 error=2 : out of memory
+Traceback (most recent call last):
+  File "main.py", line 106, in <module>
+    main()
+  File "main.py", line 101, in main
+    amnet.train()
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet.py", line 466, in train
+    self.train_epoch(epoch, train_data_loader)
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet.py", line 394, in train_epoch
+    output, outputs, alphas = self.model(data)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/modules/module.py", line 224, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet_model.py", line 242, in forward
+    eh = self.drop50(eh)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/modules/module.py", line 224, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/modules/dropout.py", line 46, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/functional.py", line 416, in dropout
+    return _functions.dropout.Dropout.apply(input, p, training, inplace)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/_functions/dropout.py", line 29, in forward
+    ctx.noise = cls._make_noise(input)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/_functions/dropout.py", line 11, in _make_noise
+    return input.new().resize_as_(input)
+RuntimeError: cuda runtime error (2) : out of memory at /pytorch/torch/lib/THC/generic/THCStorage.cu:66
+Packages & system versions:
+----------------------------------------------------------------------
+cudnn :  6021
+torch :  0.2.0_2
+numpy :  1.13.0
+display :  	NVRM version: NVIDIA UNIX x86_64 Kernel Module  375.26  Thu Dec  8 18:36:43 PST 2016
+	GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC)
+python :  3
+OpenCV :  3.2.0
+platform :  Linux-3.10.0-514.el7.x86_64-x86_64-with-centos-7.3.1611-Core
+PIL :  1.1.7
+cuda :  	CUDA Version 8.0.61
+torchvision :  0.1.9
+
+Configuration
+----------------------------------------------------------------------
+[0] cuda_device: 0
+[1] dataset_name: lamem
+[2] dataset_root: /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/
+[3] epoch_max: 55
+[4] epoch_start: 0
+[5] eval_images: 
+[6] experiment_name: lamem_ResNet50FC_lstm3_train_1
+[7] front_end_cnn: ResNet50FC
+[8] gamma: 1e-05
+[9] images_dir: images
+[10] img_mean: [0.485, 0.456, 0.406]
+[11] img_std: [0.229, 0.224, 0.225]
+[12] l2_req: 1e-06
+[13] last_step_prediction: False
+[14] lr: [0.0001]
+[15] lr_epochs: [0]
+[16] mem_loc_w: [1.0, 0.10000000149011612, 0.009999999776482582]
+[17] model_weights: 
+[18] omega: 0
+[19] seq_steps: 3
+[20] splits_dir: splits
+[21] target_mean: 0.754
+[22] target_scale: 2.0
+[23] test_batch_size: 222
+[24] test_split: 
+[25] torch_version_major: 0
+[26] torch_version_minor: 2
+[27] torchvision_version_major: 0
+[28] torchvision_version_minor: 1
+[29] train_batch_size: 222
+[30] train_split: train_1
+[31] use_attention: True
+[32] use_cuda: True
+[33] val_split: val_1
+
+Curent CUDA device:  0
+data/lamem_ResNet50FC_lstm3_train_1
+train_log_0.csv
+Loading checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_0.pkl
+Cannot open file:  data/lamem_ResNet50FC_lstm3_train_1/weights_0.pkl
+Loaded dataset:
+	 /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/splits/train_1.txt
+	train:  True
+	samples:  9000
+	batch size:  222
+	num_workers:  8
+Loaded dataset:
+	 /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/splits/val_1.txt
+	train:  False
+	samples:  1666
+	batch size:  222
+	num_workers:  8
+--------------------------------------------------------------------------------------
+Epoch:  1   Setting new learning rate:  0.0001
+THCudaCheck FAIL file=/pytorch/torch/lib/THC/generic/THCStorage.cu line=66 error=2 : out of memory
+Traceback (most recent call last):
+  File "main.py", line 106, in <module>
+    main()
+  File "main.py", line 101, in main
+    amnet.train()
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet.py", line 466, in train
+    self.train_epoch(epoch, train_data_loader)
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet.py", line 394, in train_epoch
+    output, outputs, alphas = self.model(data)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/modules/module.py", line 224, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet_model.py", line 242, in forward
+    eh = self.drop50(eh)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/modules/module.py", line 224, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/modules/dropout.py", line 46, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/functional.py", line 416, in dropout
+    return _functions.dropout.Dropout.apply(input, p, training, inplace)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/_functions/dropout.py", line 29, in forward
+    ctx.noise = cls._make_noise(input)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/_functions/dropout.py", line 11, in _make_noise
+    return input.new().resize_as_(input)
+RuntimeError: cuda runtime error (2) : out of memory at /pytorch/torch/lib/THC/generic/THCStorage.cu:66
+Packages & system versions:
+----------------------------------------------------------------------
+torch :  0.2.0_2
+python :  3
+platform :  Linux-3.10.0-514.el7.x86_64-x86_64-with-centos-7.3.1611-Core
+PIL :  1.1.7
+torchvision :  0.1.9
+cudnn :  6021
+OpenCV :  3.2.0
+display :  	NVRM version: NVIDIA UNIX x86_64 Kernel Module  375.26  Thu Dec  8 18:36:43 PST 2016
+	GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC)
+numpy :  1.13.0
+cuda :  	CUDA Version 8.0.61
+
+Configuration
+----------------------------------------------------------------------
+[0] cuda_device: 0
+[1] dataset_name: lamem
+[2] dataset_root: /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/
+[3] epoch_max: 55
+[4] epoch_start: 0
+[5] eval_images: 
+[6] experiment_name: lamem_ResNet50FC_lstm3_train_1
+[7] front_end_cnn: ResNet50FC
+[8] gamma: 1e-05
+[9] images_dir: images
+[10] img_mean: [0.485, 0.456, 0.406]
+[11] img_std: [0.229, 0.224, 0.225]
+[12] l2_req: 1e-06
+[13] last_step_prediction: False
+[14] lr: [0.0001]
+[15] lr_epochs: [0]
+[16] mem_loc_w: [1.0, 0.10000000149011612, 0.009999999776482582]
+[17] model_weights: 
+[18] omega: 0
+[19] seq_steps: 3
+[20] splits_dir: splits
+[21] target_mean: 0.754
+[22] target_scale: 2.0
+[23] test_batch_size: 222
+[24] test_split: 
+[25] torch_version_major: 0
+[26] torch_version_minor: 2
+[27] torchvision_version_major: 0
+[28] torchvision_version_minor: 1
+[29] train_batch_size: 222
+[30] train_split: train_1
+[31] use_attention: True
+[32] use_cuda: True
+[33] val_split: val_1
+
+Curent CUDA device:  0
+data/lamem_ResNet50FC_lstm3_train_1
+train_log_0.csv
+Loading checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_0.pkl
+Cannot open file:  data/lamem_ResNet50FC_lstm3_train_1/weights_0.pkl
+Loaded dataset:
+	 /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/splits/train_1.txt
+	train:  True
+	samples:  9000
+	batch size:  222
+	num_workers:  8
+Loaded dataset:
+	 /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/splits/val_1.txt
+	train:  False
+	samples:  1666
+	batch size:  222
+	num_workers:  8
+--------------------------------------------------------------------------------------
+Epoch:  1   Setting new learning rate:  0.0001
+THCudaCheck FAIL file=/pytorch/torch/lib/THC/generic/THCStorage.cu line=66 error=2 : out of memory
+Traceback (most recent call last):
+  File "main.py", line 106, in <module>
+    main()
+  File "main.py", line 101, in main
+    amnet.train()
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet.py", line 466, in train
+    self.train_epoch(epoch, train_data_loader)
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet.py", line 394, in train_epoch
+    output, outputs, alphas = self.model(data)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/modules/module.py", line 224, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet_model.py", line 242, in forward
+    eh = self.drop50(eh)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/modules/module.py", line 224, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/modules/dropout.py", line 46, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/functional.py", line 416, in dropout
+    return _functions.dropout.Dropout.apply(input, p, training, inplace)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/_functions/dropout.py", line 29, in forward
+    ctx.noise = cls._make_noise(input)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/nn/_functions/dropout.py", line 11, in _make_noise
+    return input.new().resize_as_(input)
+RuntimeError: cuda runtime error (2) : out of memory at /pytorch/torch/lib/THC/generic/THCStorage.cu:66
+Packages & system versions:
+----------------------------------------------------------------------
+display :  	NVRM version: NVIDIA UNIX x86_64 Kernel Module  375.26  Thu Dec  8 18:36:43 PST 2016
+	GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC)
+cuda :  	CUDA Version 8.0.61
+PIL :  1.1.7
+python :  3
+torch :  0.2.0_2
+cudnn :  6021
+numpy :  1.13.0
+platform :  Linux-3.10.0-514.el7.x86_64-x86_64-with-centos-7.3.1611-Core
+OpenCV :  3.2.0
+torchvision :  0.1.9
+
+Configuration
+----------------------------------------------------------------------
+[0] cuda_device: 0
+[1] dataset_name: lamem
+[2] dataset_root: /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/
+[3] epoch_max: 55
+[4] epoch_start: 0
+[5] eval_images: 
+[6] experiment_name: lamem_ResNet50FC_lstm3_train_1
+[7] front_end_cnn: ResNet50FC
+[8] gamma: 1e-05
+[9] images_dir: images
+[10] img_mean: [0.485, 0.456, 0.406]
+[11] img_std: [0.229, 0.224, 0.225]
+[12] l2_req: 1e-06
+[13] last_step_prediction: False
+[14] lr: [0.0001]
+[15] lr_epochs: [0]
+[16] mem_loc_w: [1.0, 0.10000000149011612, 0.009999999776482582]
+[17] model_weights: 
+[18] omega: 0
+[19] seq_steps: 3
+[20] splits_dir: splits
+[21] target_mean: 0.754
+[22] target_scale: 2.0
+[23] test_batch_size: 222
+[24] test_split: 
+[25] torch_version_major: 0
+[26] torch_version_minor: 2
+[27] torchvision_version_major: 0
+[28] torchvision_version_minor: 1
+[29] train_batch_size: 222
+[30] train_split: train_1
+[31] use_attention: True
+[32] use_cuda: True
+[33] val_split: val_1
+
+Curent CUDA device:  0
+data/lamem_ResNet50FC_lstm3_train_1
+train_log_0.csv
+Loading checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_0.pkl
+Cannot open file:  data/lamem_ResNet50FC_lstm3_train_1/weights_0.pkl
+Loaded dataset:
+	 /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/splits/train_1.txt
+	train:  True
+	samples:  9000
+	batch size:  222
+	num_workers:  8
+Loaded dataset:
+	 /media/Data/qipeng/modified_complete_images/pre_handle_add_label/lamem/splits/val_1.txt
+	train:  False
+	samples:  1666
+	batch size:  222
+	num_workers:  8
+--------------------------------------------------------------------------------------
+Epoch:  1   Setting new learning rate:  0.0001
+000:10.893 - 1 [    0/ 9000 (0%)]  	Loss: 1.176624 (1.175954,  0.000670)  [7.948 sec]
+000:33.073 - 1 [ 2220/ 9000 (25%)]  	Loss: 1.075317 (1.074647,  0.000670)  [22.180 sec]
+000:55.499 - 1 [ 4440/ 9000 (50%)]  	Loss: 1.008072 (1.007401,  0.000670)  [22.425 sec]
+001:18.010 - 1 [ 6660/ 9000 (75%)]  	Loss: 0.991148 (0.990478,  0.000670)  [22.512 sec]
+001:38.409 - 1 RC: 0.153827  MSE: 0.251018  [95.464 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_1.pkl
+
+Validation: avg_loss: 1.0647 (1.0640,  0.0007)    RC: 0.293963  MSE: 0.266010  image_inference: 3270.193 us
+
+--------------------------------------------------------------------------------------
+002:02.217 - 2 [    0/ 9000 (0%)]  	Loss: 0.964057 (0.963387,  0.000670)  [7.099 sec]
+002:24.576 - 2 [ 2220/ 9000 (25%)]  	Loss: 0.954149 (0.953479,  0.000670)  [22.359 sec]
+002:46.903 - 2 [ 4440/ 9000 (50%)]  	Loss: 0.890019 (0.889349,  0.000670)  [22.327 sec]
+003:09.496 - 2 [ 6660/ 9000 (75%)]  	Loss: 0.888393 (0.887723,  0.000670)  [22.593 sec]
+003:29.870 - 2 RC: 0.252485  MSE: 0.226026  [94.752 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_2.pkl
+
+Validation: avg_loss: 0.8235 (0.8228,  0.0007)    RC: 0.380786  MSE: 0.205701  image_inference: 3247.900 us
+
+--------------------------------------------------------------------------------------
+003:53.410 - 3 [    0/ 9000 (0%)]  	Loss: 0.835692 (0.835022,  0.000670)  [7.077 sec]
+004:15.686 - 3 [ 2220/ 9000 (25%)]  	Loss: 0.834950 (0.834280,  0.000670)  [22.276 sec]
+004:38.019 - 3 [ 4440/ 9000 (50%)]  	Loss: 0.765965 (0.765295,  0.000670)  [22.333 sec]
+005:00.308 - 3 [ 6660/ 9000 (75%)]  	Loss: 0.782367 (0.781697,  0.000670)  [22.289 sec]
+005:20.656 - 3 RC: 0.380607  MSE: 0.203657  [94.324 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_3.pkl
+
+Validation: avg_loss: 0.7759 (0.7753,  0.0007)    RC: 0.420897  MSE: 0.193815  image_inference: 3240.464 us
+
+--------------------------------------------------------------------------------------
+005:44.105 - 4 [    0/ 9000 (0%)]  	Loss: 0.833461 (0.832790,  0.000670)  [6.949 sec]
+006:06.341 - 4 [ 2220/ 9000 (25%)]  	Loss: 0.817561 (0.816891,  0.000670)  [22.236 sec]
+006:28.787 - 4 [ 4440/ 9000 (50%)]  	Loss: 0.814497 (0.813827,  0.000670)  [22.446 sec]
+006:51.316 - 4 [ 6660/ 9000 (75%)]  	Loss: 0.799626 (0.798955,  0.000670)  [22.529 sec]
+007:11.725 - 4 RC: 0.394104  MSE: 0.197241  [94.569 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_4.pkl
+
+Validation: avg_loss: 0.7719 (0.7713,  0.0007)    RC: 0.431996  MSE: 0.192818  image_inference: 3267.493 us
+
+--------------------------------------------------------------------------------------
+007:35.059 - 5 [    0/ 9000 (0%)]  	Loss: 0.769647 (0.768977,  0.000670)  [7.216 sec]
+007:57.477 - 5 [ 2220/ 9000 (25%)]  	Loss: 0.794802 (0.794132,  0.000670)  [22.418 sec]
+008:19.781 - 5 [ 4440/ 9000 (50%)]  	Loss: 0.727117 (0.726447,  0.000670)  [22.305 sec]
+008:42.082 - 5 [ 6660/ 9000 (75%)]  	Loss: 0.746903 (0.746233,  0.000670)  [22.300 sec]
+009:02.505 - 5 RC: 0.443311  MSE: 0.185709  [94.661 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_5.pkl
+
+Validation: avg_loss: 0.7514 (0.7507,  0.0007)    RC: 0.458946  MSE: 0.187674  image_inference: 3242.234 us
+
+--------------------------------------------------------------------------------------
+009:25.825 - 6 [    0/ 9000 (0%)]  	Loss: 0.697156 (0.696486,  0.000670)  [7.141 sec]
+009:48.115 - 6 [ 2220/ 9000 (25%)]  	Loss: 0.659787 (0.659117,  0.000670)  [22.290 sec]
+010:10.450 - 6 [ 4440/ 9000 (50%)]  	Loss: 0.686589 (0.685919,  0.000670)  [22.335 sec]
+010:32.908 - 6 [ 6660/ 9000 (75%)]  	Loss: 0.786293 (0.785623,  0.000670)  [22.458 sec]
+010:53.351 - 6 RC: 0.453302  MSE: 0.184240  [94.667 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_6.pkl
+
+Validation: avg_loss: 0.7499 (0.7493,  0.0007)    RC: 0.466399  MSE: 0.187317  image_inference: 3241.688 us
+
+--------------------------------------------------------------------------------------
+011:17.138 - 7 [    0/ 9000 (0%)]  	Loss: 0.785927 (0.785257,  0.000670)  [7.479 sec]
+011:39.523 - 7 [ 2220/ 9000 (25%)]  	Loss: 0.743067 (0.742397,  0.000670)  [22.385 sec]
+012:01.987 - 7 [ 4440/ 9000 (50%)]  	Loss: 0.710507 (0.709837,  0.000670)  [22.464 sec]
+012:24.409 - 7 [ 6660/ 9000 (75%)]  	Loss: 0.810440 (0.809770,  0.000670)  [22.421 sec]
+012:44.809 - 7 RC: 0.461770  MSE: 0.178785  [95.150 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_7.pkl
+
+Validation: avg_loss: 0.7276 (0.7270,  0.0007)    RC: 0.477395  MSE: 0.181741  image_inference: 3231.943 us
+
+--------------------------------------------------------------------------------------
+013:08.477 - 8 [    0/ 9000 (0%)]  	Loss: 0.684066 (0.683396,  0.000670)  [7.328 sec]
+013:30.741 - 8 [ 2220/ 9000 (25%)]  	Loss: 0.683478 (0.682808,  0.000670)  [22.264 sec]
+013:53.091 - 8 [ 4440/ 9000 (50%)]  	Loss: 0.656914 (0.656243,  0.000670)  [22.351 sec]
+014:15.473 - 8 [ 6660/ 9000 (75%)]  	Loss: 0.677989 (0.677318,  0.000670)  [22.382 sec]
+014:35.844 - 8 RC: 0.484022  MSE: 0.175460  [94.695 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_8.pkl
+
+Validation: avg_loss: 0.7066 (0.7060,  0.0007)    RC: 0.480856  MSE: 0.176494  image_inference: 3249.538 us
+
+--------------------------------------------------------------------------------------
+014:59.366 - 9 [    0/ 9000 (0%)]  	Loss: 0.712036 (0.711365,  0.000670)  [7.278 sec]
+015:21.724 - 9 [ 2220/ 9000 (25%)]  	Loss: 0.672496 (0.671825,  0.000670)  [22.358 sec]
+015:44.086 - 9 [ 4440/ 9000 (50%)]  	Loss: 0.722402 (0.721731,  0.000670)  [22.362 sec]
+016:06.362 - 9 [ 6660/ 9000 (75%)]  	Loss: 0.700304 (0.699634,  0.000670)  [22.276 sec]
+016:26.799 - 9 RC: 0.477363  MSE: 0.176190  [94.710 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_9.pkl
+
+Validation: avg_loss: 0.7462 (0.7456,  0.0007)    RC: 0.480937  MSE: 0.186393  image_inference: 3236.202 us
+
+--------------------------------------------------------------------------------------
+016:50.266 - 10 [    0/ 9000 (0%)]  	Loss: 0.745857 (0.745186,  0.000670)  [7.233 sec]
+017:12.667 - 10 [ 2220/ 9000 (25%)]  	Loss: 0.729915 (0.729245,  0.000670)  [22.401 sec]
+017:35.137 - 10 [ 4440/ 9000 (50%)]  	Loss: 0.704706 (0.704035,  0.000670)  [22.469 sec]
+017:57.481 - 10 [ 6660/ 9000 (75%)]  	Loss: 0.604124 (0.603454,  0.000670)  [22.345 sec]
+018:17.905 - 10 RC: 0.476801  MSE: 0.171683  [94.872 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_10.pkl
+
+Validation: avg_loss: 0.6909 (0.6903,  0.0007)    RC: 0.496342  MSE: 0.172567  image_inference: 3231.480 us
+
+--------------------------------------------------------------------------------------
+018:41.019 - 11 [    0/ 9000 (0%)]  	Loss: 0.597518 (0.596848,  0.000670)  [6.907 sec]
+019:03.197 - 11 [ 2220/ 9000 (25%)]  	Loss: 0.641747 (0.641077,  0.000670)  [22.178 sec]
+019:25.515 - 11 [ 4440/ 9000 (50%)]  	Loss: 0.732444 (0.731774,  0.000670)  [22.318 sec]
+019:47.828 - 11 [ 6660/ 9000 (75%)]  	Loss: 0.691876 (0.691205,  0.000670)  [22.313 sec]
+020:08.223 - 11 RC: 0.505664  MSE: 0.166277  [94.110 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_11.pkl
+
+Validation: avg_loss: 0.7540 (0.7534,  0.0007)    RC: 0.494202  MSE: 0.188343  image_inference: 3249.376 us
+
+--------------------------------------------------------------------------------------
+020:31.609 - 12 [    0/ 9000 (0%)]  	Loss: 0.689081 (0.688410,  0.000671)  [7.229 sec]
+020:53.849 - 12 [ 2220/ 9000 (25%)]  	Loss: 0.730887 (0.730217,  0.000670)  [22.240 sec]
+021:16.234 - 12 [ 4440/ 9000 (50%)]  	Loss: 0.621792 (0.621121,  0.000670)  [22.385 sec]
+021:38.620 - 12 [ 6660/ 9000 (75%)]  	Loss: 0.599080 (0.598409,  0.000670)  [22.386 sec]
+021:59.005 - 12 RC: 0.504073  MSE: 0.164687  [94.625 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_12.pkl
+
+Validation: avg_loss: 0.6892 (0.6885,  0.0007)    RC: 0.489164  MSE: 0.172122  image_inference: 3247.416 us
+
+--------------------------------------------------------------------------------------
+022:22.660 - 13 [    0/ 9000 (0%)]  	Loss: 0.537099 (0.536429,  0.000670)  [7.530 sec]
+022:45.005 - 13 [ 2220/ 9000 (25%)]  	Loss: 0.628803 (0.628133,  0.000670)  [22.346 sec]
+023:07.372 - 13 [ 4440/ 9000 (50%)]  	Loss: 0.629794 (0.629124,  0.000670)  [22.366 sec]
+023:29.767 - 13 [ 6660/ 9000 (75%)]  	Loss: 0.671711 (0.671040,  0.000670)  [22.395 sec]
+023:50.214 - 13 RC: 0.483487  MSE: 0.166351  [95.085 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_13.pkl
+
+Validation: avg_loss: 0.7765 (0.7758,  0.0007)    RC: 0.498781  MSE: 0.193961  image_inference: 3236.776 us
+
+--------------------------------------------------------------------------------------
+024:13.579 - 14 [    0/ 9000 (0%)]  	Loss: 0.644327 (0.643656,  0.000671)  [7.161 sec]
+024:36.131 - 14 [ 2220/ 9000 (25%)]  	Loss: 0.626045 (0.625375,  0.000670)  [22.552 sec]
+024:58.578 - 14 [ 4440/ 9000 (50%)]  	Loss: 0.745875 (0.745205,  0.000670)  [22.447 sec]
+025:20.860 - 14 [ 6660/ 9000 (75%)]  	Loss: 0.669627 (0.668957,  0.000670)  [22.282 sec]
+025:41.260 - 14 RC: 0.523964  MSE: 0.161212  [94.842 sec]
+Saving checkpoint:  data/lamem_ResNet50FC_lstm3_train_1/weights_14.pkl
+Traceback (most recent call last):
+  File "main.py", line 106, in <module>
+    main()
+  File "main.py", line 101, in main
+    amnet.train()
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet.py", line 467, in train
+    self.save_checkpoint(os.path.join(self.get_experiment_path(), 'weights_'+str(epoch) + '.pkl'))
+  File "/home/qipeng/PicMemorability/AMNet-Rumor/amnet.py", line 267, in save_checkpoint
+    torch.save({'model': self.model.state_dict()}, filename)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/serialization.py", line 120, in save
+    return _save(obj, f, pickle_module, pickle_protocol)
+  File "/usr/local/python3.5/lib/python3.5/site-packages/torch/serialization.py", line 192, in _save
+    serialized_storages[key]._write_file(f)
+RuntimeError: Unknown error -1

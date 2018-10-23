@@ -1,0 +1,7 @@
+/media/Data/qipeng/modified_complete_images/pre_handle_add_label/AMNet-Predict/images/sample/000e9fbgw1euz5ia6soqj20c811tjwf.jpg 0.00103694 0.0
+/media/Data/qipeng/modified_complete_images/pre_handle_add_label/AMNet-Predict/images/sample/000e9fbgw1euz5igh7c0j20c811ftew.jpg -0.0569226 0.0
+/media/Data/qipeng/modified_complete_images/pre_handle_add_label/AMNet-Predict/images/sample/000e9fbgw1euz5ir9m39j20c812caem.jpg 0.0363261 0.0
+/media/Data/qipeng/modified_complete_images/pre_handle_add_label/AMNet-Predict/images/sample/000e9fbgw1evop9rdgy9j206n0afdg7.jpg 0.924489 0.0
+/media/Data/qipeng/modified_complete_images/pre_handle_add_label/AMNet-Predict/images/sample/000e9fbgw1evopa79gypj20c80grq59.jpg 0.887382 0.0
+/media/Data/qipeng/modified_complete_images/pre_handle_add_label/AMNet-Predict/images/sample/000e9fbgw1evopa978esj20c80gwwgl.jpg 0.861469 0.0
+/media/Data/qipeng/modified_complete_images/pre_handle_add_label/AMNet-Predict/images/sample/000f902jw1enxyicizoij20kl0p677d.jpg 0.402293 0.0
