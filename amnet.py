@@ -188,7 +188,7 @@ class AMNet:
 
         # Todo: 避免服务器硬盘空间不够
         # self.data_dir = 'data'
-        self.data_dir = '/media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/expt4'
+        self.data_dir = '/media/Data/qipeng/modified_complete_images/AMNet-Rumor/AMNet-Train-Output/expt6'
 
         self.show_delay = 0
 
@@ -431,7 +431,7 @@ class AMNet:
             if self.win1 is None:
                 self.win1 = self.vis.line(X=np.array([epoch - 1 + batch_idx / batch_idx_max]),
                                           Y=np.array([loss.data[0]]), name=line_name,
-                                          opts=dict(xlabel='Epoch', ylabel='Loss', title='Expt 4: Training',
+                                          opts=dict(xlabel='Epoch', ylabel='Loss', title='Expt 6: Training',
                                                     showlegend=True))
             else:
                 # print('batch_idx / batch_idx_max = ' + str(batch_idx / batch_idx_max))
@@ -482,7 +482,7 @@ class AMNet:
         line_mse_name = 'train_mse'
         if self.win2 is None:
             self.win2 = self.vis.line(X=np.array([epoch]), Y=np.array([rc]), name=line_rc_name,
-                                      opts=dict(xlabel='Epoch', title='Expt 4: Evaluation', showlegend=True))
+                                      opts=dict(xlabel='Epoch', title='Expt 6: Evaluation', showlegend=True))
             self.vis.line(X=np.array([epoch]), Y=np.array([mse]), name=line_mse_name, win=self.win2, update='append',
                           opts=dict(showlegend=True))
         else:

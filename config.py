@@ -15,7 +15,7 @@ class HParameters:
 
     def __init__(self):
         self.use_cuda = True
-        self.cuda_device = 3
+        self.cuda_device = 2
 
         self.use_attention = True
         self.last_step_prediction = False
