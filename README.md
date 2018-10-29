@@ -198,10 +198,11 @@ avg / total       0.75      0.73      0.73      5400
 
 ### Learn
 
+- pytorch
+  - 多块gpu尝试
+  - 看懂模型代码：如框架使用，nn.LSTM()，forward，参数设置，维度等
 - Linux命令
   - nohup, >>, &
   - kill, ps
   - top
   - ls -lR|grep "^-"|wc -l
-- pytorch
-  - 多块gpu尝试
