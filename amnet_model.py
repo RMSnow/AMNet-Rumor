@@ -1,9 +1,9 @@
 __author__ = 'Jiri Fajtl'
 __email__ = 'ok1zjf@gmail.com'
-__version__= '6.3'
+__version__ = '6.3'
 __status__ = "Research"
 __date__ = "30/1/2018"
-__license__= "MIT License"
+__license__ = "MIT License"
 
 import torch
 import torch.nn as nn
@@ -19,18 +19,19 @@ class VGG16FC(nn.Module):
         super(VGG16FC, self).__init__()
         model = models.vgg16(pretrained=True)
         self.core_cnn = nn.Sequential(*list(model.features.children())[:-7])  # to relu5_3`
-        self.D=512
+        self.D = 512
         return
 
     def forward(self, x):
         x = self.core_cnn(x)
         return x
 
+
 class ResNet18FC(nn.Module):
     def __init__(self):
         super(ResNet18FC, self).__init__()
         self.core_cnn = models.resnet18(pretrained=True)
-        self.D=256
+        self.D = 256
         return
 
     def forward(self, x):
@@ -83,7 +84,7 @@ class ResNet101FC(nn.Module):
         return x
 
 
-#===============================================================================================
+# ===============================================================================================
 
 # Direct ResNet50 memorability estimation - no attention or RNN
 class ResNet50FT(nn.Module):
@@ -117,18 +118,17 @@ class ResNet50FT(nn.Module):
         return output, output_seq, alphas
 
 
-#===============================================================================================
+# ===============================================================================================
 class AMemNetModel(nn.Module):
-
-    def __init__(self, core_cnn, hps, a_res = 14, a_vec_size=512):
+    def __init__(self, core_cnn, hps, a_res=14, a_vec_size=512):
         super(AMemNetModel, self).__init__()
 
         self.hps = hps
         self.use_attention = hps.use_attention
-        #self.force_distribute_attention = hps.force_distribute_attention
+        # self.force_distribute_attention = hps.force_distribute_attention
         self.with_bn = True
 
-        self.a_vec_size = a_vec_size    # D
+        self.a_vec_size = a_vec_size  # D
         self.a_vec_num = a_res * a_res  # L
 
         self.seq_len = hps.seq_steps
@@ -138,9 +138,9 @@ class AMemNetModel(nn.Module):
 
         self.core_cnn = core_cnn
 
-        self.inconv = nn.Conv2d(in_channels=core_cnn.D, out_channels=a_vec_size, kernel_size=(1,1), stride=1, padding=0, bias=True)
+        self.inconv = nn.Conv2d(in_channels=core_cnn.D, out_channels=a_vec_size, kernel_size=(1, 1), stride=1,
+                                padding=0, bias=True)
         if self.with_bn: self.bn1 = nn.BatchNorm2d(a_vec_size)
-
 
         # Layers for the h and c LSTM states
         self.hs1 = nn.Linear(in_features=self.a_vec_size, out_features=self.lstm_hidden_size)
@@ -155,7 +155,7 @@ class AMemNetModel(nn.Module):
 
         # LSTM
         self.rnn = nn.LSTM(input_size=self.lstm_input_size, hidden_size=self.lstm_hidden_size,
-                        num_layers=self.lstm_layers, dropout=0.5, bidirectional=False)
+                           num_layers=self.lstm_layers, dropout=0.5, bidirectional=False)
 
         # Regression Network
         self.regnet1 = nn.Linear(in_features=self.lstm_hidden_size, out_features=512)
@@ -170,7 +170,6 @@ class AMemNetModel(nn.Module):
             self.softmax = nn.Softmax()
         else:
             self.softmax = nn.Softmax(dim=1)
-
 
     def forward(self, x):
 
@@ -187,29 +186,29 @@ class AMemNetModel(nn.Module):
 
         x = self.inconv(x)
         if self.with_bn: x = self.bn1(x)
-        x = self.relu(x) # -> [B, D, Ly, Lx] [B, 512, 14, 14]
+        x = self.relu(x)  # -> [B, D, Ly, Lx] [B, 512, 14, 14]
         x = self.drop80(x)
 
         a = x.view(x.size(0), self.a_vec_size, self.a_vec_num)  # [B, D, L]
 
         # Extract the annotation vector
         # Mean of each feature map
-        af = a.mean(2) # [B, D]
+        af = a.mean(2)  # [B, D]
 
         # Hidden states for the LSTM
         hs = self.hs1(af)  # [D->H]
         hs = self.tanh(hs)
 
-        cs = self.hc1(af) # [D->H]
+        cs = self.hc1(af)  # [D->H]
         cs = self.tanh(cs)
 
-        e = a.transpose(2, 1).contiguous() # -> [B, L, D]
-        e = e.view(-1, self.a_vec_size) # a=[B, L, D] -> (-> [B*L, D])
-        e = self.e1(e) # [B*L, D] -> [B*L, D]
+        e = a.transpose(2, 1).contiguous()  # -> [B, L, D]
+        e = e.view(-1, self.a_vec_size)  # a=[B, L, D] -> (-> [B*L, D])
+        e = self.e1(e)  # [B*L, D] -> [B*L, D]
         e = self.relu(e)
         e = self.drop50(e)
-        e = e.view(-1, self.a_vec_num, self.a_vec_size) # -> [B, L, D]
-        e = e.transpose(2,1) # -> [B, D, L]
+        e = e.view(-1, self.a_vec_num, self.a_vec_size)  # -> [B, L, D]
+        e = e.transpose(2, 1)  # -> [B, D, L]
 
         # Execute the LSTM steps
         h = hs
@@ -230,13 +229,13 @@ class AMemNetModel(nn.Module):
                 # Dynamic part of the alpha map from the current hidden RNN state
                 if 0:
                     eh = self.eh12(h)  # -> [H -> D]
-                    eh = eh.view(-1, self.a_vec_size, 1) # [B, D, 1]
-                    eh = e+eh # [B, D, L]  + [B, D, 1]  => adds the eh vec[D] to all positions [L] of the e tensor
+                    eh = eh.view(-1, self.a_vec_size, 1)  # [B, D, 1]
+                    eh = e + eh  # [B, D, L]  + [B, D, 1]  => adds the eh vec[D] to all positions [L] of the e tensor
 
                 if 1:
                     eh = self.eh1(h)  # -> [H -> L]
                     eh = eh.view(-1, 1, self.a_vec_num)  # [B, 1, L]
-                    eh = e+eh  # [B, D, L]  + [B, 1, L]
+                    eh = e + eh  # [B, D, L]  + [B, 1, L]
 
                 eh = self.relu(eh)
                 eh = self.drop50(eh)
@@ -247,18 +246,18 @@ class AMemNetModel(nn.Module):
                 eh = self.eh3(eh)  # -> [B*L, 512] -> [B*L, 1]
                 eh = eh.view(-1, self.a_vec_num)  # -> [B, L]
 
-
-                alpha = self.softmax(eh) # -> [B, L]
+                alpha = self.softmax(eh)  # -> [B, L]
 
             else:
                 alpha = self.alpha
 
-            alpha_a = alpha.view(alpha.size(0), self.a_vec_num, 1) # -> [B, L, 1]
-            z = a.bmm(alpha_a) # ->[B, D, 1] scale the location feature vectors by the alpha mask and add them (matrix mul)
+            alpha_a = alpha.view(alpha.size(0), self.a_vec_num, 1)  # -> [B, L, 1]
+            z = a.bmm(
+                alpha_a)  # ->[B, D, 1] scale the location feature vectors by the alpha mask and add them (matrix mul)
             # [D, L] * [L] = [D]
 
             z = z.view(z.size(0), self.a_vec_size)
-            z = z.expand(1, z.size(0), z.size(1)) # Prepend a new, single dimension representing the sequence
+            z = z.expand(1, z.size(0), z.size(1))  # Prepend a new, single dimension representing the sequence
 
             if self.seq_len == 0:
                 z = z.squeeze(dim=0)
@@ -290,13 +289,11 @@ class AMemNetModel(nn.Module):
             output_seq[ind] = out
             alphas[ind] = alpha.unsqueeze(1)
 
-
         output_seq = torch.cat(output_seq, 1)
         alphas = torch.cat(alphas, 1)
 
         output = None
         return output, output_seq, alphas
-
 
     def load_weights(self, state_dict, info=False):
         """Copies parameters and buffers from :attr:`state_dict` into
@@ -326,7 +323,7 @@ class AMemNetModel(nn.Module):
             except:
                 print('While copying the parameter named {}, whose dimensions in the model are'
                       ' {} and whose dimensions in the checkpoint are {}, ...'.format(
-                          name, own_state[name].size(), param.size()))
+                    name, own_state[name].size(), param.size()))
                 raise
 
         missing = set(own_state.keys()) - set(state_dict.keys())
